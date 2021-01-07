@@ -1,6 +1,6 @@
 {
     "name": "svgsprite-file",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Generate a svg sprite full of symbols from a folder of svgs.",
     "main": "./bin/index.js",
     "bin": {
@@ -24,11 +24,11 @@
         "url": "https://github.com/thomas-gordon/svgsprite-file/issues"
     },
     "homepage": "https://github.com/thomas-gordon/svgsprite-file#readme",
-    "devDependencies": {
+    "dependencies": {
         "colors": "^1.4.0",
         "imagemin": "^7.0.1",
         "imagemin-svgo": "^8.0.0",
         "minimist": "^1.2.5",
-        "svgstore-cli": "^2.0.0"
+        "svgstore": "^2.0.0"
     }
 }
