@@ -1,9 +1,8 @@
-const path = require("path");
-const fs = require("fs");
+#!/usr/bin/env node
 
 const argv = require("minimist")(process.argv);
 const colors = require("colors/safe");
-const { minifyImages, generateSprite } = require('../lib/generators');
+const { minifyImages, generateSprite } = require("../lib/generators");
 
 const SRC = argv.src || null;
 const SPRITE = argv.sprite || null;
@@ -29,11 +28,11 @@ const generate = async () => {
     }
     try {
         const transformedFiles = await minifyImages(SRC, SPRITE);
-        await generateSprite(transformedFiles, CSSCLASS, SPRITE,PREPENDID);
+        await generateSprite(transformedFiles, CSSCLASS, SPRITE, PREPENDID);
         console.log(colors.green(`SVGSprite svg file generated: ${SPRITE}`));
     } catch (e) {
-		console.log(colors.red(`Something went wrong: ${e} `));
-		process.exit(1);
+        console.log(colors.red(`Something went wrong: ${e} `));
+        process.exit(1);
     }
 };
 
