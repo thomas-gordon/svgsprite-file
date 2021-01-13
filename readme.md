@@ -26,3 +26,5 @@ eg. `$npm_package_config_theme/templates/partials/svg/symbol/svg-sprite.twig`
 `--prepend-symbol-id` = Optional; default: `svg-`
 
 `--css-class` = Optional; default: `svg-sprite`
+
+`--hidden` = Optional; adds inline style to the sprite of `style="display:none"`

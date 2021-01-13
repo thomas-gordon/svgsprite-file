@@ -8,6 +8,7 @@ const SRC = argv.src || null;
 const SPRITE = argv.sprite || null;
 const PREPENDID = argv["prepend-symbol-id"] || "svg-";
 const CSSCLASS = argv["css-class"] || "svg-sprite";
+const HIDDEN = argv["hidden"] ? true : false;
 
 const generate = async () => {
     if (!SRC) {
@@ -28,7 +29,13 @@ const generate = async () => {
     }
     try {
         const transformedFiles = await minifyImages(SRC, SPRITE);
-        await generateSprite(transformedFiles, CSSCLASS, SPRITE, PREPENDID);
+        await generateSprite(
+            transformedFiles,
+            CSSCLASS,
+            SPRITE,
+            PREPENDID,
+            HIDDEN
+        );
         console.log(colors.green(`SVGSprite svg file generated: ${SPRITE}`));
     } catch (e) {
         console.log(colors.red(`Something went wrong: ${e} `));
