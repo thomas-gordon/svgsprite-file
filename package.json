@@ -1,6 +1,6 @@
 {
   "name": "svgsprite-file",
-  "version": "0.0.6",
+  "version": "0.0.8",
   "description": "Generate a svg sprite full of symbols from a folder of svgs.",
   "main": "./bin/index.js",
   "bin": {
@@ -16,9 +16,9 @@
     "url": "git+https://github.com/thomas-gordon/svgsprite-file.git"
   },
   "type": "module",
-  "exports": "./bin/index.js",
   "files": [
-    "./bin/index.js"
+    "bin",
+    "lib"
   ],
   "keywords": [
     "svgsprite",
