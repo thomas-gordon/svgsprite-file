@@ -4,14 +4,13 @@ import minimist from 'minimist';
 import colors from "colors/safe.js";
 import { minifyImages, generateSprite } from "../lib/generators.js";
 
-const argy = minimist(process.argv)
-const SRC = argy['src'] || null;
-const SPRITE = argy['sprite'] || null;
-const PREPENDID = argy["prepend-symbol-id"] || "svg-";
-const CSSCLASS = argy["css-class"] || "svg-sprite";
-const HIDDEN = argy["hidden"] ? true : false;
-
 const generate = async () => {
+  const argy = minimist(process.argv)
+  const SRC = argy['src'] || null;
+  const SPRITE = argy['sprite'] || null;
+  const PREPENDID = argy["prepend-symbol-id"] || "svg-";
+  const CSSCLASS = argy["css-class"] || "svg-sprite";
+  const HIDDEN = argy["hidden"] ? true : false;
     if (!SRC) {
         console.log( 
             colors.red.underline(
