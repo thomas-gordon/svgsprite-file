@@ -7,8 +7,7 @@
         "svgsprite-file": "./bin/index.js"
     },
     "scripts": {
-        "start": "node ./bin/index.js",
-        "fix-resolutions": "npx npm-force-resolutions"
+        "start": "node ./bin/index.js"
     },
     "repository": {
         "type": "git",
@@ -24,16 +23,12 @@
     "bugs": {
         "url": "https://github.com/thomas-gordon/svgsprite-file/issues"
     },
-    "resolutions": {
-        "css-what": "5.0.1"
-    },
     "homepage": "https://github.com/thomas-gordon/svgsprite-file#readme",
     "dependencies": {
         "cheerio": "^1.0.0-rc.10",
         "colors": "^1.4.0",
         "imagemin": "^8.0.0",
         "imagemin-svgo": "^9.0.0",
-        "minimist": "^1.2.5",
-        "svgstore": "^3.0.0-2"
+        "minimist": "^1.2.5"
     }
 }
