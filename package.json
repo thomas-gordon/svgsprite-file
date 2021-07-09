@@ -8,7 +8,7 @@
     },
     "scripts": {
         "start": "node ./bin/index.js",
-        "preinstall": "npx npm-force-resolutions"
+        "fix-resolutions": "npx npm-force-resolutions"
     },
     "repository": {
         "type": "git",
