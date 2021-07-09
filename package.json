@@ -13,6 +13,11 @@
         "type": "git",
         "url": "git+https://github.com/thomas-gordon/svgsprite-file.git"
     },
+    "type": "module",
+    "exports": "./bin/index.js",
+    "files": [
+        "./bin/index.js"
+    ],
     "keywords": [
         "svgsprite",
         "svg",
@@ -27,8 +32,10 @@
     "dependencies": {
         "cheerio": "^1.0.0-rc.10",
         "colors": "^1.4.0",
-        "imagemin": "^8.0.0",
+        "imagemin": "^7.0.1",
         "imagemin-svgo": "^9.0.0",
-        "minimist": "^1.2.5"
+        "minimist": "^1.2.5",
+        "object-assign": "^4.1.1",
+        "yargs": "^17.0.1"
     }
 }

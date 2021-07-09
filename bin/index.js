@@ -1,18 +1,19 @@
 #!/usr/bin/env node
 
-const argv = require("minimist")(process.argv);
-const colors = require("colors/safe");
-const { minifyImages, generateSprite } = require("../lib/generators");
+import minimist from 'minimist';
+import colors from "colors/safe.js";
+import { minifyImages, generateSprite } from "../lib/generators.js";
 
-const SRC = argv.src || null;
-const SPRITE = argv.sprite || null;
-const PREPENDID = argv["prepend-symbol-id"] || "svg-";
-const CSSCLASS = argv["css-class"] || "svg-sprite";
-const HIDDEN = argv["hidden"] ? true : false;
+const argy = minimist(process.argv)
+const SRC = argy['src'] || null;
+const SPRITE = argy['sprite'] || null;
+const PREPENDID = argy["prepend-symbol-id"] || "svg-";
+const CSSCLASS = argy["css-class"] || "svg-sprite";
+const HIDDEN = argy["hidden"] ? true : false;
 
 const generate = async () => {
     if (!SRC) {
-        console.log(
+        console.log( 
             colors.red.underline(
                 "Please specify a glob --src path for the folder of SVGs to create the sprite from eg. example/**/*.svg"
             )
@@ -43,4 +44,4 @@ const generate = async () => {
     }
 };
 
-module.exports = generate();
+export default generate();
