@@ -1,6 +1,6 @@
 {
   "name": "svgsprite-file",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Generate a svg sprite full of symbols from a folder of svgs.",
   "main": "./bin/index.js",
   "bin": {
@@ -36,11 +36,13 @@
     "colors": "^1.4.0",
     "imagemin": "^7.0.1",
     "imagemin-svgo": "^9.0.0",
+    "meow": "^10.0.1",
     "minimist": "^1.2.5",
     "object-assign": "^4.1.1",
     "yargs": "^17.0.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
     "execa": "^5.1.1",
     "jest": "^27.0.6"
   }
